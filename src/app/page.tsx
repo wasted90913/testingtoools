@@ -9,10 +9,10 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8">
       <Header />
       <div className="mt-8">
-        <Tabs defaultValue="traffic-decryptor" className="w-full">
+        <Tabs defaultValue="payload-generator" className="w-full">
           <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 bg-secondary">
-            <TabsTrigger value="traffic-decryptor">WS Traffic Decryptor</TabsTrigger>
             <TabsTrigger value="payload-generator">Exploitation Payload Generator</TabsTrigger>
+            <TabsTrigger value="traffic-decryptor">WS Traffic Decryptor</TabsTrigger>
             <TabsTrigger value="infra-recon">Infrastructure Recon</TabsTrigger>
           </TabsList>
           <TabsContent value="traffic-decryptor" className="mt-6">
