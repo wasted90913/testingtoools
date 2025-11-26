@@ -10,12 +10,12 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
-export const GeneratePayloadInputSchema = z.object({
+const GeneratePayloadInputSchema = z.object({
   description: z.string().describe('A natural language description of the desired exploitation payload.'),
 });
 export type GeneratePayloadInput = z.infer<typeof GeneratePayloadInputSchema>;
 
-export const GeneratePayloadOutputSchema = z.object({
+const GeneratePayloadOutputSchema = z.object({
     payload: z.record(z.any()).describe('The generated JSON payload object for the game command.'),
 }).describe('A structured JSON payload representing a game command.');
 export type GeneratePayloadOutput = z.infer<typeof GeneratePayloadOutputSchema>;
