@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertTriangle, Server, ShieldAlert, User, KeyRound, Globe } from 'lucide-react';
 import { useSession } from "@/context/session-context";
+import { Label } from "@/components/ui/label";
 
 const InfrastructureRecon = () => {
   const { sessionData } = useSession();
