@@ -5,6 +5,7 @@ import ExploitationPayloadGenerator from "@/components/dashboard/exploitation-pa
 import InfrastructureRecon from "@/components/dashboard/infrastructure-recon";
 import SiteWebview from "@/components/dashboard/site-webview";
 import { SessionProvider } from "@/context/session-context";
+import VulnerabilityReport from "@/components/dashboard/vulnerability-report";
 
 export default function Home() {
   return (
@@ -13,11 +14,12 @@ export default function Home() {
         <Header />
         <div className="mt-8">
           <Tabs defaultValue="site-webview" className="w-full">
-            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-4 bg-secondary">
+            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-5 bg-secondary">
               <TabsTrigger value="site-webview">Site Webview</TabsTrigger>
               <TabsTrigger value="infra-recon">Infrastructure Recon</TabsTrigger>
               <TabsTrigger value="payload-generator">Exploitation Payload Generator</TabsTrigger>
               <TabsTrigger value="traffic-decryptor">WS Traffic Decryptor</TabsTrigger>
+              <TabsTrigger value="vulnerability-report">Vulnerability Report</TabsTrigger>
             </TabsList>
             <TabsContent value="traffic-decryptor" className="mt-6">
               <WsTrafficDecryptor />
@@ -30,6 +32,9 @@ export default function Home() {
             </TabsContent>
             <TabsContent value="site-webview" className="mt-6">
               <SiteWebview />
+            </TabsContent>
+            <TabsContent value="vulnerability-report" className="mt-6">
+              <VulnerabilityReport />
             </TabsContent>
           </Tabs>
         </div>
