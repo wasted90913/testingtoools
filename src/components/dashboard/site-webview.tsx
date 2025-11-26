@@ -9,14 +9,14 @@ import { useSession } from '@/context/session-context';
 import { useToast } from '@/hooks/use-toast';
 
 const SiteWebview = () => {
-  const [url, setUrl] = useState('https://www.google.com/webhp?igu=1');
-  const [iframeUrl, setIframeUrl] = useState('https://www.google.com/webhp?igu=1');
+  const [url, setUrl] = useState('http://play.firekirin.in/web_mobile/firekirin/');
+  const [iframeUrl, setIframeUrl] = useState('https://example.com');
   const { setSessionData } = useSession();
   const { toast } = useToast();
 
   const handleLoadUrl = () => {
     let finalUrl = url;
-    if (!/^https?:\/\//i.test(url)) {
+    if (!/^(https?|ftp):\/\//i.test(url)) {
       finalUrl = 'https://' + url;
     }
     setIframeUrl(finalUrl);
